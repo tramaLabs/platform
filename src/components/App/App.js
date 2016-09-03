@@ -25,7 +25,7 @@ class App extends Component {
       setTitle: PropTypes.func,
       setMeta: PropTypes.func,
     }).isRequired,
-    children: PropTypes.element.isRequired,
+    children: PropTypes.any.isRequired,
     error: PropTypes.object,
   };
 
