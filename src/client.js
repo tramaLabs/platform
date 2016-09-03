@@ -11,8 +11,8 @@ import 'babel-polyfill';
 import ReactDOM from 'react-dom';
 import FastClick from 'fastclick';
 import UniversalRouter from 'universal-router';
-import history from './core/history';
 import { readState, saveState } from 'history/lib/DOMStateStorage';
+import history from './core/history';
 import routes from './routes';
 import configureStore from './store/configureStore';
 import {
