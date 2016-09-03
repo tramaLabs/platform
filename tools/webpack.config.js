@@ -74,6 +74,23 @@ const config = {
       },
       {
         test: /\.css/,
+        include: /node_modules/,
+        loaders: [
+          'isomorphic-style-loader',
+          `css-loader?${JSON.stringify({
+            sourceMap: DEBUG,
+            // CSS Modules https://github.com/css-modules/css-modules
+            modules: false,
+            localIdentName: '[local]',
+            // CSS Nano http://cssnano.co/options/
+            minimize: !DEBUG,
+          })}`,
+          'postcss-loader?pack=default',
+        ],
+      },
+      {
+        test: /\.css/,
+        exclude: /node_modules/,
         loaders: [
           'isomorphic-style-loader',
           `css-loader?${JSON.stringify({
