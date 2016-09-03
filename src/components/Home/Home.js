@@ -21,7 +21,7 @@ function Home({ initiatives }, context) {
     <div className={s.root}>
       <div className={s.container}>
         <h1 className={s.title}>Near initiatives</h1>
-        <a href="/initiative">Add your initiative</a>
+        <a href="/new-initiative">Add your initiative</a>
         <ul className={s.news}>
           {initiatives.map((item, index) => (
             <li key={index} className={s.newsItem}>

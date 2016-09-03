@@ -5,16 +5,12 @@ const Initiative = Model.define('Initiative', {
 
   id: {
     type: DataType.UUID,
+    defaultValue: DataType.UUIDV1,
     primaryKey: true,
   },
 
   name: {
     type: DataType.STRING(300),
-    defaultValue: false,
-  },
-
-  home: {
-    type: DataType.GEOMETRY('POINT'),
     defaultValue: false,
   },
 
@@ -29,7 +25,7 @@ const Initiative = Model.define('Initiative', {
   website: {
     type: DataType.STRING(255),
   },
-}, 
+},
 {
   indexes: [
     { fields: ['name'] },

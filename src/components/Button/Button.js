@@ -28,9 +28,13 @@ class Button extends Component { // eslint-disable-line react/prefer-stateless-f
 
   render() {
     const { to, ...props } = this.props; // eslint-disable-line no-use-before-define
-    return  <button className={"button"} type={props.type}>
+    return  (
+      <button
+        className={className}
+        type={props.type}>
               {props.text}
-            </button>;
+      </button>
+    );
   }
 
 }
