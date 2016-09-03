@@ -11,10 +11,6 @@ import { GraphQLList as List } from 'graphql';
 import fetch from '../../core/fetch';
 import InitiativesItemType from '../types/InitiativesItemType';
 
-// React.js Initiatives Feed (RSS)
-const url = 'http://ajax.googleapis.com/ajax/services/feed/load' +
-            '?v=1.0&num=10&q=https://reactjsnews.com/feed.xml';
-
 let items = [];
 let lastFetchTask;
 let lastFetchTime = new Date(1970, 0, 1);
@@ -22,15 +18,134 @@ let lastFetchTime = new Date(1970, 0, 1);
 const initiatives = {
   type: new List(InitiativesItemType),
   resolve() {
-      return fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          if (data.responseStatus === 200) {
-            items = data.responseData.feed.entries;
-          }
-
-          return items;
-        })
+    return [
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+      {
+        title: 'Hackatrama',
+        slug: 'hackatrama',
+        description: 'Venha para o Hackatrama. O Hackathon mais legal do mundo. vlwflw',
+        picture: 'http://placekitten.com/200/300',
+        interests: ['development', 'cats', 'kank'],
+        author: { name: 'Trama' },
+        resources: ['local', 'comida', 'energético', '1kg de café'],
+      },
+    ];
+      // return fetch(url)
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     if (data.responseStatus === 200) {
+      //       items = data.responseData.feed.entries;
+      //     }
+      //
+      //     return items;
+      //   })
   },
 };
 

@@ -11,16 +11,21 @@ import {
   GraphQLObjectType as ObjectType,
   GraphQLString as StringType,
   GraphQLNonNull as NonNull,
+  GraphQLList as ListType,
 } from 'graphql';
+import UserType from './UserType';
 
 const InitiativesItemType = new ObjectType({
   name: 'InitiativesItem',
   fields: {
     title: { type: new NonNull(StringType) },
-    link: { type: new NonNull(StringType) },
-    author: { type: StringType },
+    author: { type: UserType },
+    slug: { type: new NonNull(StringType) },
+    picture: { type: new NonNull(StringType) },
+    resources: { type: new ListType(StringType) },
+    interests: { type: new ListType(StringType) },
     publishedDate: { type: new NonNull(StringType) },
-    contentSnippet: { type: StringType },
+    description: { type: StringType },
   },
 });
 
