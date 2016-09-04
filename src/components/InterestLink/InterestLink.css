@@ -1,0 +1,20 @@
+.link {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 18px;
+}
+
+.link:hover, .link:focus {
+  color: #fff;
+}
+
+.link:before {
+  position: absolute;
+  top: calc(50% - 4px);
+  left: 0;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #EA6D1C;
+}
