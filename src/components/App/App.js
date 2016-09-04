@@ -14,6 +14,7 @@ import s from './App.css';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+import bt from 'bootstrap/dist/css/bootstrap.css?root=./node_modules/bootstrap/dist/'; // eslint-disable-line import/no-unresolved, max-len
 
 class App extends Component {
 
@@ -49,10 +50,12 @@ class App extends Component {
   componentWillMount() {
     const { insertCss } = this.props.context;
     this.removeCss = insertCss(s);
+    this.removeBootstrap = insertCss(bt);
   }
 
   componentWillUnmount() {
     this.removeCss();
+    this.removeBootstrap();
   }
 
   render() {
