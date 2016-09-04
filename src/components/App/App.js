@@ -10,11 +10,11 @@
 import React, { Component, PropTypes } from 'react';
 import emptyFunction from 'fbjs/lib/emptyFunction';
 import { Provider } from 'react-redux';
+import bt from 'bootstrap/dist/css/bootstrap.css?root=./node_modules/bootstrap/dist/'; // eslint-disable-line import/no-unresolved, max-len
 import s from './App.css';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
-import bt from 'bootstrap/dist/css/bootstrap.css?root=./node_modules/bootstrap/dist/'; // eslint-disable-line import/no-unresolved, max-len
 
 class App extends Component {
 

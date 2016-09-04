@@ -23,7 +23,7 @@ import errorPageStyle from './routes/error/ErrorPage.css';
 import UniversalRouter from 'universal-router';
 import PrettyError from 'pretty-error';
 import passport from './core/passport';
-import models from './data/models';
+import models, { Initiative } from './data/models';
 import schema from './data/schema';
 import routes from './routes';
 import createHistory from './core/createHistory';
@@ -71,6 +71,14 @@ app.get('/login/facebook/return',
     res.redirect('/');
   }
 );
+
+app.post('/api/initiatives', (req, res) => {
+  Initiative.create({
+    name: req.body.name,
+  }).then((initiative) => {
+    res.send(initiative);
+  });
+});
 
 //
 // Register API middleware

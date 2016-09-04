@@ -145,6 +145,7 @@ const config = {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.json'],
     alias: {
       '~components': path.join(__dirname, '../src/components'),
+      '~actions': path.join(__dirname, '../src/actions'),
     },
   },
 

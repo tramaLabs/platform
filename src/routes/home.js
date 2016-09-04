@@ -23,7 +23,7 @@ export default {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{initiatives{title,slug,description,interests,picture,author{name}}}',
+        query: '{initiatives{id,name,picture,location,website}}',
       }),
       credentials: 'include',
     });

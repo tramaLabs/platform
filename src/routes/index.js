@@ -15,6 +15,7 @@ import home from './home';
 import contact from './contact';
 import login from './login';
 import initiative from './initiative';
+import newInitiative from './new-initiative';
 import register from './register';
 import content from './content';
 import error from './error';
@@ -30,6 +31,7 @@ export default {
     login,
     initiative,
     register,
+    newInitiative,
 
     // place new routes before...
     content,
