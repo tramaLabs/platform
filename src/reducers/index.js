@@ -5,4 +5,5 @@ import initiative from './initiative';
 export default combineReducers({
   runtime,
   initiative,
+  user: (state = {}) => state
 });
