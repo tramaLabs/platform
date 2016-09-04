@@ -82,7 +82,7 @@ passport.use(new FacebookStrategy({
         ],
       });
       if (users.length) {
-        done(null, users[0]);
+        done(null, users[0].dataValues);
       } else {
         let user = await User.findOne({ where: { email: profile._json.email } });
         if (user) {

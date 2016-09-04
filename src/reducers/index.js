@@ -3,4 +3,5 @@ import runtime from './runtime';
 
 export default combineReducers({
   runtime,
+  user: (state = {}) => state
 });
