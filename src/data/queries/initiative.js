@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { GraphQLList as List, GraphQLID } from 'graphql';
+import { GraphQLID } from 'graphql';
 import InitiativesItemType from '../types/InitiativesItemType';
 import Initiative from '../models/Initiative';
 
@@ -16,18 +16,14 @@ function retornaEssaMerda(source, args) {
   return new Promise((resolve) => {
     if (args.id) {
       Initiative.find({ id: args.id }).then((initiative) => {
-        resolve([initiative]);
-      });
-    } else {
-      Initiative.findAll().then((initiatives) => {
-        resolve(initiatives);
+        resolve(initiative);
       });
     }
   });
 }
 
-const initiativesQuery = {
-  type: new List(InitiativesItemType),
+const initiativeQuery = {
+  type: InitiativesItemType,
   args: {
     id: {
       type: GraphQLID,
@@ -36,4 +32,4 @@ const initiativesQuery = {
   resolve: retornaEssaMerda,
 };
 
-export default initiativesQuery;
+export default initiativeQuery;

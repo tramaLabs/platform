@@ -10,12 +10,14 @@
 import {
   GraphQLObjectType as ObjectType,
   GraphQLString as StringType,
+  GraphQLID as ID,
+  GraphQLNonNull as NonNull,
 } from 'graphql';
 
 const InitiativesType = new ObjectType({
   name: 'Initiative',
   fields: {
-    id: { type: StringType },
+    id: { type: new NonNull(ID) },
     name: { type: StringType },
     picture: { type: StringType },
     location: { type: StringType },

@@ -8,14 +8,37 @@
  */
 
 import React from 'react';
-import AddInitiative from './AddInitiative';
+import Initiative from '~components/Initiative';
 
 export default {
 
-  path: '/initiative',
+  path: '/initiative/:initiativeId',
 
-  action() {
-    return <AddInitiative />;
+  async action(ctx, { initiativeId }) {
+    const resp = await fetch('/graphql', {
+      method: 'post',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          {
+            initiative(id: "${initiativeId}"){
+              id,
+              name,
+              picture,
+              location,
+              website,
+            }
+          }
+        `,
+      }),
+      credentials: 'include',
+    });
+
+    const { data } = await resp.json();
+    if (!data || !data.initiative) throw new Error('Failed to load the initiative');
+    return <Initiative initiative={data.initiative} />;
   },
-
 };

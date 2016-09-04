@@ -16,6 +16,7 @@ import me from './queries/me';
 import content from './queries/content';
 import news from './queries/news';
 import initiatives from './queries/initiatives';
+import initiative from './queries/initiative';
 
 const schema = new Schema({
   query: new ObjectType({
@@ -25,6 +26,7 @@ const schema = new Schema({
       content,
       news,
       initiatives,
+      initiative,
     },
   }),
 });

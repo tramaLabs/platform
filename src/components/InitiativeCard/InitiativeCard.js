@@ -23,7 +23,7 @@ const InitiativeCard = ({ initiative: { id, name, picture, location, website } }
   return (
     <div className={s.card}>
       <img className={s.image} src={picture} width="100%" height="100%" />
-      <a className={s.link} href={`/initiatives/${id}`} />
+      <a className={s.link} href={`/initiative/${id}`} />
       <div className={s.info}>
         <div className={s.title}>{name}</div>
         <div className={s.description}>{location}</div>
