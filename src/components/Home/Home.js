@@ -11,7 +11,9 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
-const title = 'React Starter Kit';
+import InitiativeCard from '../InitiativeCard';
+
+const title = 'Trama';
 
 function Home({ initiatives }, context) {
   context.setTitle(title);
@@ -23,11 +25,7 @@ function Home({ initiatives }, context) {
         <ul className={s.news}>
           {initiatives.map((item, index) => (
             <li key={index} className={s.newsItem}>
-              <a href={item.link} className={s.newsTitle}>{item.title}</a>
-              <span
-                className={s.newsDesc}
-                dangerouslySetInnerHTML={{ __html: item.contentSnippet }}
-              />
+              <InitiativeCard initiative={item} />
             </li>
           ))}
         </ul>
@@ -37,11 +35,7 @@ function Home({ initiatives }, context) {
 }
 
 Home.propTypes = {
-  initiatives: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    contentSnippet: PropTypes.string,
-  })).isRequired,
+  initiatives: PropTypes.array.isRequired,
 };
 Home.contextTypes = { setTitle: PropTypes.func.isRequired };
 
