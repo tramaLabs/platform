@@ -4,17 +4,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Trama MVP</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="css/estilo.css">
 	<link rel="stylesheet" href="css/home.css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-	<script src="js/bootstrap.min.js"></script>
-
 </head>
 	<body>
 
 		<!-- Inicio do header -->
 		<div class="header">
+		<div>
 			<!-- Inicio da navbar -->
 			<nav class="navbar navbar-default navbar-fixed-top">
 		      	<div class="container">
@@ -34,34 +34,34 @@
 			        <div id="navbar" class="navbar-collapse collapse">
 			          <ul class="nav navbar-nav pull-right">
 			            <li><a href="inscrever.html"><button type="button" class="btn btn-primary">Inscrever</button></a></li>
-			            <li><a href="manifesto.html" class=btnManifesto"">Manifesto</a></li>
+			            <li><a href="manifesto.html" class="btnManifesto">Manifesto</a></li>
 			          </ul>
 			        </div><!--/.nav-collapse -->
 		  		</div>
 	    	</nav>
+	    	</div>
 	    	<!-- Final da navbar -->
 
 	    	<!-- Inicio do jumbotron -->
 	    	<div class="jumbotron">
 		      <div class="container">
-		        <h1>Hello, world!</h1>
-		        <p class="txtGoldenCircle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editora</p>
+		        <p class="txtGoldenCircle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido</p>
 		        <p class="botaoGoldenCircle">
 		        	<a class="btn btn-primary btn-lg" href="#" role="button">Crie sua Iniciativa</a>
 		        </p>
 		      </div>
 		    </div>
 
-		    <div class="row">
-		    	<div class="container">
-		    		<div class="col-md-12 exploreTxt"> 
-		    			Explore as iniciativas!
+		    <div class="row exploreRow">
+		    	<div class="container ">
+		    		<div class="col-md-12 exploreTxt">
+		    			<h2>Explore iniciativas<h2>
 		    		</div>
     				<div class="col-md-8 col-md-offset-2">
     					<div class="input-group">
-					      <input type="text" class="form-control" placeholder="Procure...">
+					      <input type="text" class="form-control" placeholder="Use tags para pesquisar (Ex.: música, rio de janeiro)">
 					      <span class="input-group-btn">
-					        <button class="btn btn-default btnBusca" type="button">Vai!</button>
+					        <button class="btn btn-explorar" type="button">Explorar</button>
 					      </span>
 					    </div><!-- /input-group -->
     				</div>
@@ -73,16 +73,16 @@
 		<!-- Inicio dos Corpo do site -->
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 exploreTxt"> 
-	    			Iniciativas em destaque!
+				<div class="col-md-12 iniciativaDestaque"> 
+	    			<h1>Iniciativas em Destaque<h1>
 	    		</div>
 			</div>
 
 	      <!-- Inicio dos cards de iniciativas -->
 	      <div class="row">
-			<div class="col-md-3 card"><!-- div geral do card -->
-	        	<img src="img/trama.jpeg" class="img-responsive" alt="">
-	        	<div> <!-- div da area subalocada -->
+			<div class="col-md-3 col-sm-12 card"><!-- div geral do card -->
+	        	<img src="img/foto1.jpg" class="img-responsive" alt="">
+	        	<div class="cardConteudoInicial"> <!-- div da area subalocada -->
 	        		<div><!-- div do titulo da iniciativa -->
 	        			Oficina com das crianças
 	        		</div><!-- div do titulo da iniciativa -->
@@ -95,6 +95,8 @@
 	         		</div><!-- final das tags da iniciativa -->	         		
      			</div><!-- final da div da area subalocada -->
 	        </div><!-- final da div geral do card -->
+
+
 			
 
 	      </div><!-- row -->

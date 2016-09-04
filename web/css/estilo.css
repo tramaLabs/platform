@@ -1,0 +1,54 @@
+p{
+	color:white;
+}
+
+h1{
+	font-size: 30px;
+}
+
+h2{
+	font-size: 25px;
+}
+
+.btn{
+	background-color: transparent;
+	border-radius: 0px;
+	color:white;
+	border: 1px solid white;
+	font-size: 20px;
+	padding:12px;
+}
+
+/*-----Inicio navbar----*/
+
+.header{
+	background-image: url("../img/imgHeader.jpg");
+	background-position:50% 50%;
+}
+
+.navbar{
+	height:80px;
+	font-size: 20px;
+}
+
+.navbar-default{
+	background-color: rgba(0,0,0,0.5);
+	border:none;
+}
+
+.logoNavBar{
+	height:50px;
+	margin-top: 15px;
+}
+
+a.btnManifesto{
+	margin-top:20px;
+	color:white !important;
+}
+
+
+/*-------Final Navbar-------*/
+
+
+
+

@@ -1,0 +1,65 @@
+/*-------Inicio Jumbotron-------*/
+
+.jumbotron{
+	padding: 57px 220px;
+	background-color: rgba(0,0,0,0.6);
+	margin-bottom: 0px;
+}
+
+.txtGoldenCircle{
+	margin-top: 80px;
+}
+
+.botaoGoldenCircle{
+	text-align:center;
+}
+
+.botaoGoldenCircle a.btn{
+	font-size: 21px;
+}
+
+.exploreRow{
+	background-color:rgba(255,133,6,0.55);
+	padding-top: 10px;
+	padding-bottom: 30px;	
+}
+
+.exploreTxt{
+	color:white;
+	text-align: center;
+}
+
+.exploreRow input{
+	margin-right: 5px;
+}
+
+/*da um espaco do input para o botao*/
+.input-group .form-control {
+	width:97%;
+	border-radius: 0px;
+	padding:15px;
+	height:45px;
+}
+
+.btn-explorar{
+	height:45px;
+	font-weight: bold;
+	font-size: 15px;
+}
+/*-------Final Jumbotron-------*/
+
+
+
+/*Inicio do corpo do site*/
+
+.iniciativaDestaque{
+	text-align: center;
+}
+
+.cardConteudoInicial{
+	background-color: rgba(0,0,0,0.3);
+}
+/*Final do corpo do site*/
+
+
+
