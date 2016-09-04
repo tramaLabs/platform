@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.image {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  bottom: 0;
+  color: #fff;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.interests {
+  overflow: hidden;
+  list-style: square;
+  padding: 0;
+  margin: 0;
+}
+
+.interests li {
+  float: left;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.interests a {
+  color: #fff;
+  font-size: 0.875rem;
+
+}
+
+.description {
+  display: none;
+}
