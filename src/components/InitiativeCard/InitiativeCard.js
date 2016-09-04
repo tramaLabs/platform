@@ -2,18 +2,21 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './InitiativeCard.css';
 
+import InterestLink from '../InterestLink';
+import Link from '../Link';
+
 const InitiativeCard = ({ initiative: { picture, title, interests, description, slug } }) => {
   return (
     <div className={s.card}>
       <img className={s.image} src={picture} width="100%" height="100%" />
-      <a className={s.link} href={`/initiatives/${slug}`} />
+      <Link className={s.link} to={`/initiatives/${slug}`} />
       <div className={s.info}>
         <div className={s.title}>{title}</div>
-        <ul className={s.interests}>
+        <div className={s.interests}>
           {interests.map((interest, i) =>
-            <li key={i}><a className={s.link} href={`/${interest}`}>{interest}</a></li>
+            <InterestLink key={i} interest={interest} />
           )}
-        </ul>
+        </div>
         <div className={s.description}>{description}</div>
       </div>
     </div>

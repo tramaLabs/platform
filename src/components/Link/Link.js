@@ -55,11 +55,6 @@ class Link extends Component { // eslint-disable-line react/prefer-stateless-fun
         history.push(this.props.to);
       } else {
         history.push({
-// =======
-//         this.props.navigate(this.props.to);
-//       } else {
-//         this.props.navigate({
-// >>>>>>> react-starter-kit/feature/redux
           pathname: event.currentTarget.pathname,
           search: event.currentTarget.search,
         });
@@ -70,21 +65,8 @@ class Link extends Component { // eslint-disable-line react/prefer-stateless-fun
   render() {
     const { to, ...props } = this.props; // eslint-disable-line no-use-before-define
     return <a href={history.createHref(to)} {...props} onClick={this.handleClick} />;
-// =======
-//     const { to, navigate: _, ...props } = this.props; // eslint-disable-line no-unused-vars
-//     return <a href={this.context.createHref(to)} {...props} onClick={this.handleClick} />;
-// >>>>>>> react-starter-kit/feature/redux
   }
 
 }
 
 export default Link;
-// =======
-// const mapState = null;
-//
-// const mapDispatch = {
-//   navigate,
-// };
-//
-// export default connect(mapState, mapDispatch)(Link);
-// >>>>>>> react-starter-kit/feature/redux

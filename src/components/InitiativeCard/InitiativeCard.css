@@ -13,41 +13,43 @@
   object-position: center;
 }
 
+.link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+
 .info {
   position: absolute;
   width: 100%;
   background-color: rgba(0,0,0,0.7);
   bottom: 0;
   color: #fff;
-  padding: 0.5rem;
+  padding: 16px;
   overflow: hidden;
+  will-change: height;
+  height: 80px;
+  transition: height 500ms ease-in-out;
+}
+
+.card:hover .info {
+  height: 100%;
 }
 
 .title {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
-.interests {
-  overflow: hidden;
-  list-style: square;
-  padding: 0;
-  margin: 0;
-}
-
-.interests li {
-  float: left;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.interests a {
-  color: #fff;
-  font-size: 0.875rem;
-
+.interests > * {
+  margin-right: 16px;
+  z-index: 10;
 }
 
 .description {
-  display: none;
+  margin-top: 20px;
 }
