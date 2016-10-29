@@ -46,7 +46,7 @@ Um usuario pode:
 
 ----------
 
-###interesse
+###interesse (n mvp)
     
 > Um interesse eh uma tag usada para busca de entidades que a possuem
 
@@ -65,7 +65,7 @@ Um evento tem:
 
 - nome (facebook)
 - descricao (facebook)
-- [interesse]
+- [interesse] (n mvp)
 - iniciativa que o organiza
 - [usuario] que participa
 - [recurso] que precisa
