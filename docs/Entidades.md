@@ -65,7 +65,7 @@ Um evento tem:
 
 - nome (facebook)
 - descricao (facebook)
-- [interesse] (n mvp)
+- [interesse] #n mvp
 - iniciativa que o organiza
 - [usuario] que participa
 - [recurso] que precisa
@@ -98,7 +98,7 @@ Uma iniciativa pode:
 - modificar seus recursos
 
 ----------
-###recurso
+###recurso #mvp só hashtag 
 
 > Um recurso eh algo fisico ou uma acao que usuarios podem dar para iniciativas ou para eventos
 
