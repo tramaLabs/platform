@@ -42,7 +42,6 @@ Um usuario pode:
 
 - criar uma iniciativa
 - aderir a uma iniciativa
-- modificar seus recursos
 - contribuir com um evento, atraves de recursos 
 
 ----------
