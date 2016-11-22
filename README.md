@@ -8,7 +8,7 @@
         - [Express](http://expressjs.com/)
         - [GraphQL](http://graphql.org/)
         - [React](https://facebook.github.io/react/)
-            - [Redux]()
+        - [Redux](http://redux.js.org/)
     - [Webpack](http://webpack.github.io/)
     - [Babel](http://babeljs.io/)
     - [Browsersync](http://www.browsersync.io/)
