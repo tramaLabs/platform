@@ -94,6 +94,7 @@ app.use('/graphql', expressGraphQL(req => ({
 // Register server-side rendering middleware
 // -----------------------------------------------------------------------------
 app.get('*', async (req, res, next) => {
+  console.log(req.user)
   const history = createHistory(req.url);
   // let currentLocation = history.getCurrentLocation();
   let sent = false;
@@ -112,7 +113,9 @@ app.get('*', async (req, res, next) => {
   });
 
   try {
-    const store = configureStore({}, {
+    const store = configureStore({
+      user: req.user,    
+    }, {
       cookie: req.headers.cookie,
       history,
     });

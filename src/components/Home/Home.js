@@ -8,6 +8,7 @@
  */
 
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
@@ -15,13 +16,14 @@ import InitiativeCard from '../InitiativeCard';
 
 const title = 'Trama';
 
-function Home({ initiatives }, context) {
+function Home({ initiatives, user }, context) {
   context.setTitle(title);
   return (
     <div className={s.root}>
       <div className={s.container}>
         <h1 className={s.title}>Near initiatives</h1>
-        <a href="/new-initiative">Add your initiative</a>
+        <a href="/initiative">Add your initiative</a>
+        {"email: "}{user && user.email}
         <ul className={s.news}>
           {initiatives.map((item, index) => (
             <li key={index} className={s.newsItem}>
@@ -39,4 +41,4 @@ Home.propTypes = {
 };
 Home.contextTypes = { setTitle: PropTypes.func.isRequired };
 
-export default withStyles(s)(Home);
+export default connect(({ user }) => ({ user }))(withStyles(s)(Home))
