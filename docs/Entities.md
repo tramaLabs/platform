@@ -25,11 +25,11 @@ name can:
 
 
 
-###user
+###collaborator
 
-> A user "actor" vinculated to a facebook account.
+> A collaborator "actor" vinculated to a facebook account.
 
-A user has:
+A collaborator has:
 
 - Photo (facebook)
 - name (facebook)
@@ -38,7 +38,7 @@ A user has:
 - [events] #not in mvp
 - [resource] #not in mvp
     
-A user can:
+A collaborator can:
 
 - create an initiative
 - join an initiative
@@ -61,7 +61,7 @@ An event has:
 - description (facebook)
 - [interest] #not in mvp
 - initiative 
-- [user] that participates
+- [collaborator] that participates
 - [resource] that it needs
 
 An event can have:
@@ -74,7 +74,7 @@ An event can:
 ----------
 ###initiative
 
-> An initative creates events and is composed by users without any hierarchy.
+> An initative creates events and is composed by collaborators without any hierarchy.
 
 
 An initiative has:
@@ -82,7 +82,7 @@ An initiative has:
 - Picture 
 - name 
 - [interest]
-- [user] that participates
+- [collaborator] that participates
 - [events] that organizes
 - [resource]  that it needs
 An initiative can:
